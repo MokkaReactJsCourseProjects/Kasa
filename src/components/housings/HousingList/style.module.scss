@@ -1,0 +1,19 @@
+.list {
+    background-color: var(--color-lightgray);
+    border-radius: 25px;
+    margin-top: 43px;
+    padding-top: 56px;
+    padding-bottom: 43px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px 60px;
+}
+
+.loadingText {
+    color: var(--color-primary);
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 128px;
+    margin-bottom: 128px;
+}

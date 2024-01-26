@@ -1,5 +1,5 @@
 //Imports
-import { logo, logoWhite } from "../../../assets/images";
+import images from "../../../assets/images";
 
 //Types
 type LogoProps = {
@@ -11,7 +11,7 @@ type LogoProps = {
 export default function Logo({ width = 210, isWhite = false }: LogoProps) {
     return (
         <img
-            src={isWhite ? logoWhite : logo}
+            src={isWhite ? images.logoWhite : images.logo}
             alt={`Logo Kasa`}
             style={{ width }}
         />
