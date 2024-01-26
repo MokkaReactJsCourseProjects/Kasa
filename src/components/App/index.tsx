@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { HomePage, NotFoundPage, HousingPage, AboutPage } from "../../pages";
 import Paths from "../../types/paths";
 import Header from "../header/Header";
+import Footer from "../Footer";
 
 //Exports
 export default function App() {
@@ -20,7 +21,7 @@ export default function App() {
                     <Route path={Paths.splat} element={<NotFoundPage />} />
                 </Routes>
             </main>
-            <footer>© 2020 Kasa. All rights reserved</footer>
+            <Footer />
         </>
     );
 }
