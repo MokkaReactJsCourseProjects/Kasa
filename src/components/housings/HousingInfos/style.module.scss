@@ -17,4 +17,13 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    gap: 76px;
+    margin-top: 24px;
+}
+
+.description,
+.equipmentList li {
+    line-height: 142.6%;
+    font-size: 18px;
+    font-weight: 400;
 }

@@ -7,6 +7,8 @@ import starActive from "./star-active.svg";
 import starInactive from "./star-inactive.svg";
 import chevronLeft from "./chevron-left.svg";
 import chevronRight from "./chevron-right.svg";
+import chevronUp from "./chevron-up.svg";
+import chevronDown from "./chevron-down.svg";
 
 //Re-exports
 export default {
@@ -18,4 +20,6 @@ export default {
     starInactive,
     chevronLeft,
     chevronRight,
+    chevronUp,
+    chevronDown,
 };
