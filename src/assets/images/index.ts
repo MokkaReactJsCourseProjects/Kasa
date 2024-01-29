@@ -5,6 +5,8 @@ import landscape1 from "./landscape-1.jpg";
 import landscape2 from "./landscape-2.jpg";
 import starActive from "./star-active.svg";
 import starInactive from "./star-inactive.svg";
+import chevronLeft from "./chevron-left.svg";
+import chevronRight from "./chevron-right.svg";
 
 //Re-exports
 export default {
@@ -14,4 +16,6 @@ export default {
     landscape2,
     starActive,
     starInactive,
+    chevronLeft,
+    chevronRight,
 };

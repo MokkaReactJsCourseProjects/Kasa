@@ -13,6 +13,7 @@ export default function Logo({ width = 210, isWhite = false }: LogoProps) {
         <img
             src={isWhite ? images.logoWhite : images.logo}
             alt={`Logo Kasa`}
+            draggable={false}
             style={{ width }}
         />
     );

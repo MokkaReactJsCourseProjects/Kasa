@@ -17,9 +17,13 @@ export default function HousingPage() {
         return housings.list.find((elem) => elem.id === housingId);
     }, [housingId, housings.list]);
 
+    if (!housing) {
+        return null;
+    }
+
     return (
         <main>
-            <PictureCarousel />
+            <PictureCarousel pictures={housing.pictures} />
             <HousingInfos housing={housing} />
         </main>
     );

@@ -11,11 +11,6 @@ type HousingInfosProps = {
 
 //Exports
 export default function HousingInfos({ housing }: HousingInfosProps) {
-    console.log(housing);
-    if (!housing) {
-        return null;
-    }
-
     return (
         <section className={style.section}>
             <div className={style.mainInfos}>

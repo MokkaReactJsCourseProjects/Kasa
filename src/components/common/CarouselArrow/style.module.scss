@@ -1,0 +1,15 @@
+.arrow {
+    background: none;
+    border: none;
+    transition: transform 150ms ease-out;
+    img {
+        width: 47px;
+    }
+    &:hover {
+        transform: scale(1.35);
+        cursor: pointer;
+    }
+    &:active {
+        transform: scale(0.7);
+    }
+}
