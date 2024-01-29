@@ -1,5 +1,4 @@
 //Imports
-
 import images from "../../assets/images";
 import Subheader from "../../components/common/Subheader";
 import HousingList from "../../components/housings/HousingList";

@@ -1,0 +1,23 @@
+.part {
+    flex: 1;
+    margin-right: 64px;
+}
+
+.housingTitle {
+    color: var(--color-primary);
+    font-size: 36px;
+    line-height: 142.6%;
+}
+
+.location {
+    color: black;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.tags {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}

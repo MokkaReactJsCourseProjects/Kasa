@@ -13,7 +13,7 @@ type HousingCardProps = {
 export default function HousingCard({ housing }: HousingCardProps) {
     return (
         <article className={style.card}>
-            <Link to={Paths.housing + housing.id}>
+            <Link to={`${Paths.housing}/${housing.id}`}>
                 <img
                     src={housing.cover}
                     alt="Miniature"

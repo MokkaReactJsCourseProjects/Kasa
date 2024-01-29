@@ -1,0 +1,21 @@
+.host {
+    display: flex;
+    align-items: center;
+}
+
+.name {
+    width: 96px;
+    color: var(--color-primary);
+    font-size: 18px;
+    text-align: right;
+    line-height: 142.6%;
+}
+
+.picture {
+    background-color: var(--color-primary);
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 999px;
+    margin-left: 10px;
+}

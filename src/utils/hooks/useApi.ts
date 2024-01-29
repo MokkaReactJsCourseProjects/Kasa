@@ -10,11 +10,8 @@ export default function useApi() {
         const fetchData = async () => {
             const response = await fetch("/housings.json");
             const newData = await response.json();
-            setTimeout(() => {
-                //To simulate latency
-                setData(newData);
-                setIsLoading(false);
-            }, Math.random() * 2000);
+            setData(newData);
+            setIsLoading(false);
         };
         fetchData();
     }, []);
