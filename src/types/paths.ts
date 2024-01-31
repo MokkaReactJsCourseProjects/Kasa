@@ -4,6 +4,7 @@ enum Paths {
     home = "/",
     housing = "/housing",
     about = "/about",
+    notFound = "/not-found",
 }
 
 export default Paths;

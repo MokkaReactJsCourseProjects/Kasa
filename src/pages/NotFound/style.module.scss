@@ -1,0 +1,26 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 89px;
+}
+
+.code {
+    color: var(--color-primary);
+    font-size: 288px;
+    font-weight: 700;
+    margin-bottom: 139px;
+}
+
+.message {
+    color: var(--color-primary);
+    font-size: 36px;
+    margin-bottom: 139px;
+}
+
+.goHome {
+    color: black;
+    font-size: 18px;
+    text-decoration-line: underline;
+    margin-bottom: 89px;
+}
