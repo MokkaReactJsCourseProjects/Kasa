@@ -19,10 +19,10 @@ export default function HousingInfos({ housing }: HousingInfosProps) {
                 <RightPart housing={housing} />
             </div>
             <div className={style.details}>
-                <Dropdown title="Description">
+                <Dropdown title="Description" titleFontSize={18}>
                     <p className={style.description}>{housing.description}</p>
                 </Dropdown>
-                <Dropdown title="Équipements">
+                <Dropdown title="Équipements" titleFontSize={18}>
                     <ul className={style.equipmentList}>
                         {housing.equipments.map((equipment) => (
                             <li key={equipment}>{equipment}</li>

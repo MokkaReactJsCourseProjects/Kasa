@@ -16,13 +16,15 @@ export default function HousingPage() {
     const { currentPath } = usePage();
     const housingId = currentPath.split("/")[2];
     const housing: Housing = useMemo(() => {
-        return housings.list.find((elem) => elem.id === housingId);
+        return housings.list.find((elem: Housing) => elem.id === housingId);
     }, [housingId, housings.list]);
+
     useEffect(() => {
-        if (!housing) {
+        if (!housing && housings.loaded) {
             navigate(Paths.notFound);
         }
-    }, [housing, navigate]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [housing]);
 
     if (!housing) {
         return null;

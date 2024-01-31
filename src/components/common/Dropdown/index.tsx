@@ -6,11 +6,16 @@ import images from "../../../assets/images";
 //Types
 type DropdownProps = {
     title: string;
+    titleFontSize?: number;
     children: React.ReactNode;
 };
 
 //Exports
-export default function Dropdown({ title, children }: DropdownProps) {
+export default function Dropdown({
+    title,
+    titleFontSize = 24,
+    children,
+}: DropdownProps) {
     const contentRef = useRef(null);
     const [contentHeight, setContentHeight] = useState(0);
     const [contentY, setContentY] = useState(0);
@@ -38,11 +43,13 @@ export default function Dropdown({ title, children }: DropdownProps) {
                 className={style.interactible}
                 title={chevronName}
                 onClick={handleClick}
+                style={{ fontSize: `${titleFontSize}px` }}
             >
                 {title}
                 <img
-                    src={opened ? images.chevronUp : images.chevronDown}
+                    src={images.chevronDown}
                     alt={chevronName}
+                    style={{ transform: `rotate(${opened ? 180 : 0}deg)` }}
                 />
             </button>
             <main

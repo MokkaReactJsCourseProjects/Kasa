@@ -24,6 +24,6 @@
 .description,
 .equipmentList li {
     line-height: 142.6%;
-    font-size: 18px;
+    font-size: var(--text-size-base);
     font-weight: 400;
 }
