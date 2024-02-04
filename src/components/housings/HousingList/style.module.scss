@@ -8,11 +8,18 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px 60px;
+    @media (max-width: 720px) {
+        margin-top: 22px;
+        background: none;
+        padding: 0;
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 
 .loadingText {
     color: var(--color-primary);
-    font-size: 24px;
+    font-size: var(--text-size-large);
     font-weight: 700;
     margin-top: 128px;
     margin-bottom: 128px;

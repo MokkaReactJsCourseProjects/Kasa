@@ -1,0 +1,39 @@
+.part {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 64px;
+    @media (max-width: 720px) {
+        flex: unset;
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+.housingTitle {
+    color: var(--color-primary);
+    font-size: var(--text-size-xl);
+    line-height: 142.6%;
+    @media (max-width: 720px) {
+        margin-bottom: 5px;
+    }
+}
+
+.location {
+    color: black;
+    font-size: var(--text-size-base);
+    margin-bottom: 20px;
+    @media (max-width: 720px) {
+        margin-bottom: 10px;
+    }
+}
+
+.tags {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    @media (max-width: 720px) {
+        width: 100%;
+    }
+}

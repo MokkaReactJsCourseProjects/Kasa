@@ -7,15 +7,22 @@
 
 .code {
     color: var(--color-primary);
-    font-size: 288px;
+    font-size: var(--text-size-giant);
     font-weight: 700;
     margin-bottom: 139px;
+    @media (max-width: 720px) {
+        margin-bottom: 113px;
+    }
 }
 
 .message {
     color: var(--color-primary);
-    font-size: 36px;
+    font-size: var(--text-size-xl);
     margin-bottom: 139px;
+    text-align: center;
+    @media (max-width: 720px) {
+        margin-bottom: 113px;
+    }
 }
 
 .goHome {

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Image } from "../../../types/misc";
 import style from "./style.module.scss";
 import CarouselArrow from "../../common/CarouselArrow";
+import { useWindow } from "../../../utils/hooks";
 
 //Types
 type PictureCarouselProps = {
@@ -11,6 +12,7 @@ type PictureCarouselProps = {
 
 //Exports
 export default function PictureCarousel({ pictures }: PictureCarouselProps) {
+    const { isMobile } = useWindow();
     const [selected, setSelected] = useState(0);
     const pictureAmount = pictures.length;
 
@@ -23,9 +25,11 @@ export default function PictureCarousel({ pictures }: PictureCarouselProps) {
             />
             {pictureAmount > 1 ? (
                 <>
-                    <p className={style.selectionText}>{`${
-                        selected + 1
-                    }/${pictureAmount}`}</p>
+                    {isMobile === false ? (
+                        <p className={style.selectionText}>{`${
+                            selected + 1
+                        }/${pictureAmount}`}</p>
+                    ) : null}
                     <div className={style.arrows}>
                         <CarouselArrow
                             name="Précédent"

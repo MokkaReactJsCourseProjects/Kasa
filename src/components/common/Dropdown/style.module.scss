@@ -17,10 +17,17 @@
     line-height: 142.6%;
 
     img {
+        width: 24px;
         transition: transform 250ms ease-out;
     }
     &:hover {
         cursor: pointer;
+    }
+    @media (max-width: 720px) {
+        padding: 10px 12px 10px 10px;
+        img {
+            width: 16px;
+        }
     }
 }
 

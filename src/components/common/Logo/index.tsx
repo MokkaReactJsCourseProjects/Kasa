@@ -3,12 +3,12 @@ import images from "../../../assets/images";
 
 //Types
 type LogoProps = {
-    width?: number;
+    width: number;
     isWhite?: boolean;
 };
 
 //Exports
-export default function Logo({ width = 210, isWhite = false }: LogoProps) {
+export default function Logo({ width, isWhite = false }: LogoProps) {
     return (
         <img
             src={isWhite ? images.logoWhite : images.logo}

@@ -6,7 +6,20 @@
 :root {
     --color-primary: #ff6060;
     --color-lightgray: #f6f6f6;
+    --text-size-small: 14px;
     --text-size-base: 18px;
+    --text-size-large: 24px;
+    --text-size-xl: 36px;
+    --text-size-xxl: 48px;
+    --text-size-giant: 288px;
+    @media (max-width: 720px) {
+        --text-size-small: 10px;
+        --text-size-base: 13px;
+        --text-size-large: 12px;
+        --text-size-xl: 18px;
+        --text-size-xxl: 24px;
+        --text-size-giant: 96px;
+    }
 }
 
 * {
@@ -36,7 +49,7 @@ ul {
 }
 
 .link-default {
-    font-size: 24px;
+    font-size: var(--text-size-large);
 }
 
 .underlined {

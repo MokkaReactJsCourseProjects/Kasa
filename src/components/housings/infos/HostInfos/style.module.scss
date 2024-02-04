@@ -9,6 +9,9 @@
     font-size: var(--text-size-base);
     text-align: right;
     line-height: 142.6%;
+    @media (max-width: 720px) {
+        width: 72px;
+    }
 }
 
 .picture {
@@ -18,4 +21,8 @@
     object-fit: cover;
     border-radius: 999px;
     margin-left: 10px;
+    @media (max-width: 720px) {
+        width: 32px;
+        height: 32px;
+    }
 }

@@ -6,14 +6,14 @@ import images from "../../../assets/images";
 //Types
 type DropdownProps = {
     title: string;
-    titleFontSize?: number;
+    titleFontSize: number;
     children: React.ReactNode;
 };
 
 //Exports
 export default function Dropdown({
     title,
-    titleFontSize = 24,
+    titleFontSize,
     children,
 }: DropdownProps) {
     const contentRef = useRef(null);

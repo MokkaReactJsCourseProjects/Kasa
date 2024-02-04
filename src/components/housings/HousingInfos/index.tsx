@@ -1,8 +1,9 @@
 //Imports
 import { Housing } from "../../../types/housing";
+import { useWindow } from "../../../utils/hooks";
 import Dropdown from "../../common/Dropdown";
-import LeftPart from "../infos/LeftPart";
-import RightPart from "../infos/RightPart";
+import PartOne from "../infos/PartOne";
+import PartTwo from "../infos/PartTwo";
 import style from "./style.module.scss";
 
 //Types
@@ -12,17 +13,25 @@ type HousingInfosProps = {
 
 //Exports
 export default function HousingInfos({ housing }: HousingInfosProps) {
+    const { isMobile } = useWindow();
+
     return (
         <section className={style.section}>
             <div className={style.mainInfos}>
-                <LeftPart housing={housing} />
-                <RightPart housing={housing} />
+                <PartOne housing={housing} />
+                <PartTwo housing={housing} />
             </div>
             <div className={style.details}>
-                <Dropdown title="Description" titleFontSize={18}>
+                <Dropdown
+                    title="Description"
+                    titleFontSize={isMobile ? 13 : 18}
+                >
                     <p className={style.description}>{housing.description}</p>
                 </Dropdown>
-                <Dropdown title="Équipements" titleFontSize={18}>
+                <Dropdown
+                    title="Équipements"
+                    titleFontSize={isMobile ? 13 : 18}
+                >
                     <ul className={style.equipmentList}>
                         {housing.equipments.map((equipment) => (
                             <li key={equipment}>{equipment}</li>

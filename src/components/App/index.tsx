@@ -6,7 +6,7 @@ import Paths from "../../types/paths";
 import Header from "../header/Header";
 import Footer from "../Footer";
 import style from "./style.module.scss";
-import useApi from "../../utils/hooks/useApi";
+import { useApi } from "../../utils/hooks/";
 import { loadHousings } from "../../utils/redux_toolkit/slices/housingsSlice";
 import { useEffect } from "react";
 

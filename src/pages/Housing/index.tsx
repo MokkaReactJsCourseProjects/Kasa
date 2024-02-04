@@ -24,7 +24,7 @@ export default function HousingPage() {
             navigate(Paths.notFound);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [housing]);
+    }, [housing, housings.loaded]);
 
     if (!housing) {
         return null;

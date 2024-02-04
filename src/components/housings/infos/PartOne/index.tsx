@@ -4,12 +4,12 @@ import Tag from "../Tag";
 import style from "./style.module.scss";
 
 //Types
-type LeftPartProps = {
+type PartOneProps = {
     housing: Housing;
 };
 
 //Exports
-export default function LeftPart({ housing }: LeftPartProps) {
+export default function PartOne({ housing }: PartOneProps) {
     return (
         <div className={style.part}>
             <h2 className={style.housingTitle}>{housing.title}</h2>

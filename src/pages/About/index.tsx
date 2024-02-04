@@ -3,14 +3,20 @@ import images from "../../assets/images";
 import Subheader from "../../components/common/Subheader";
 import Dropdown from "../../components/common/Dropdown";
 import style from "./style.module.scss";
+import { useWindow } from "../../utils/hooks";
 
 //Exports
 export default function AboutPage() {
+    const { isMobile } = useWindow();
+
     return (
         <main>
             <Subheader bgImage={images.landscape2} overlayOpacity={0.3} />
             <div className={style.details}>
-                <Dropdown title={`Fiabilité`}>
+                <Dropdown
+                    title={`Fiabilité`}
+                    titleFontSize={isMobile ? 13 : 24}
+                >
                     <p>
                         Les annonces postées sur Kasa garantissent une fiabilité
                         totale. Les photos sont conformes aux logements, et
@@ -18,7 +24,7 @@ export default function AboutPage() {
                         nos équipes.
                     </p>
                 </Dropdown>
-                <Dropdown title={`Respect`}>
+                <Dropdown title={`Respect`} titleFontSize={isMobile ? 13 : 24}>
                     <p>
                         La bienveillance fait partie des valeurs fondatrices de
                         Kasa. Tout comportement discriminatoire ou de
@@ -26,7 +32,7 @@ export default function AboutPage() {
                         notre plateforme.
                     </p>
                 </Dropdown>
-                <Dropdown title={`Service`}>
+                <Dropdown title={`Service`} titleFontSize={isMobile ? 13 : 24}>
                     <p>
                         La bienveillance fait partie des valeurs fondatrices de
                         Kasa. Tout comportement discriminatoire ou de
@@ -34,7 +40,7 @@ export default function AboutPage() {
                         notre plateforme.
                     </p>
                 </Dropdown>
-                <Dropdown title={`Sécurité`}>
+                <Dropdown title={`Sécurité`} titleFontSize={isMobile ? 13 : 24}>
                     <p>
                         La sécurité est la priorité de Kasa. Aussi bien pour nos
                         hôtes que pour les voyageurs, chaque logement correspond

@@ -9,6 +9,18 @@
     margin-top: 50px;
     padding-top: 66px;
     padding-bottom: 29px;
+    p {
+        text-align: center;
+        font-size: var(--text-size-large);
+    }
+    @media (max-width: 720px) {
+        gap: 18px;
+        margin-top: 27px;
+        padding-bottom: 58px;
+        p {
+            width: 35%;
+        }
+    }
 }
 
 .copyrights {

@@ -1,0 +1,6 @@
+.link {
+    text-align: right;
+    @media (max-width: 720px) {
+        text-transform: uppercase;
+    }
+}

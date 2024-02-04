@@ -4,6 +4,10 @@
     height: 415px;
     border-radius: 25px;
     overflow: hidden;
+    @media (max-width: 720px) {
+        height: 255px;
+        border-radius: 10px;
+    }
 }
 
 .selectedPicture {
@@ -33,4 +37,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 24px;
+    @media (max-width: 720px) {
+        padding: 6px;
+    }
 }
