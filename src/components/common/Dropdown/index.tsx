@@ -1,5 +1,5 @@
 //Imports
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import style from "./style.module.scss";
 import images from "../../../assets/images";
 
@@ -21,18 +21,22 @@ export default function Dropdown({
     const [contentY, setContentY] = useState(0);
     const [opened, setOpened] = useState(false);
     const chevronName = opened ? "Fermer" : "Ouvrir";
+    useEffect(() => {
+        if (contentRef.current) {
+            setContentY(contentRef.current.offsetHeight);
+        }
+    }, [opened]);
+
     const handleClick = () => {
         if (opened) {
             setOpened(false);
             if (contentRef.current) {
                 setContentHeight(0);
-                setContentY(contentRef.current.offsetHeight);
             }
         } else {
             setOpened(true);
             if (contentRef.current) {
                 setContentHeight(contentRef.current.offsetHeight);
-                setContentY(0);
             }
         }
     };
@@ -59,7 +63,7 @@ export default function Dropdown({
                 <div
                     ref={contentRef}
                     className={style.content}
-                    style={{ top: `-${contentY * 3}px` }}
+                    style={{ top: `${-3 * contentY + contentHeight * 3}px` }}
                 >
                     {children}
                 </div>

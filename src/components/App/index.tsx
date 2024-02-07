@@ -28,7 +28,7 @@ export default function App() {
                 <Routes>
                     <Route index element={<HomePage />} />
                     <Route
-                        path={Paths.housing + Paths.splat}
+                        path={Paths.housing + "/:id"}
                         element={<HousingPage />}
                     />
                     <Route path={Paths.about} element={<AboutPage />} />
